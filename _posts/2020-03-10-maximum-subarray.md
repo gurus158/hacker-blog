@@ -50,7 +50,7 @@ That's it return max_so_far at the end.
 
 ### C++ code will be :
 
-```cpp
+```c++
 class Solution {
 public:
     int maxSubArray(vector<int>& nums){
@@ -65,4 +65,8 @@ public:
   }
 };
 ```
+I like this problem... 
+
+hope you find this helpful.
+
 
