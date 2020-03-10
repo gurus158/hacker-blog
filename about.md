@@ -9,7 +9,14 @@ My name is **Gurdeep**. I'm a Software Developer currently working at [Mfilterit
 I did my Computer Engineering from National Institute of Kurukshetra,India
 I also love Hacking and frequently take part in CTF competition. My CTF team is Scr!ptk!dd!es and we also have a dedicated [Discord Server](https://discord.gg/nbZJekr) you can join if you want to play CTF with us.
 
-Other than Hacking and programming , I also love to play Chess, read books, watch movies and play Basketball.
+Other than Hacking and programming , I also love to 
+
+* play Chess
+* read books
+* watch movies
+* play Basketball
+* Freestyle hip-hop dance
+* Rap
 
 Here I will share  mostly my tech-related thoughts, but also I will share anything I feel like sharing.
 
