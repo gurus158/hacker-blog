@@ -42,9 +42,9 @@ initaily current_max and max_sofar both are equal to first element of array.
 
 **in each iteration,** 
 
-update **current_max** equal to maximum of **current_max + current_element** and **current_element**. The idea is if we found a element which is greater than current sum (including it) we should discard the previous values and start from this elemnent.
+* update **current_max** equal to maximum of **current_max + current_element** and **current_element**. The idea is if we found a element which is greater than current sum (including it) we should discard the previous values and start from this elemnent.
 
-update max_so_far
+* update max_so_far
 
 That's it return max_so_far at the end.
 
