@@ -24,7 +24,7 @@ There can be many solution to this problem. Below are two of them.
 
 ### NAIVE
 
-Simplest Approach will be finding all subarray and calculate their sum and find maximum among those. But only problem with this is this approach is slow.
+Simplest Approach will be finding all subarray and calculate their sum and find maximum among those. But only problem is this approach is slow.
 
 Say we have array of 10 elements. (1,2,3,4,5,6,7,8,9,10) . How many subarrays are there??
 
