@@ -213,7 +213,8 @@ city ordinates i used is
 
 running main.py gives following results
 
-![Screenshot from 2020-03-18 15-05-56.png]({{site.baseurl}}/_posts/Screenshot from 2020-03-18 15-05-56.png)
+![rs.png]({{site.baseurl}}/_posts/rs.png)
+
 
 
 I ran this two times... and as you can see , first one gives solution \[4,3,0,2,1] and second time it gave solution \[1,2,0,3,4] which is same and correct.
