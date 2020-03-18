@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 # A Genetic algorithm to solve Traveling salesman problem 
 
