@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## How to host a website in Dark web from localhost
 
@@ -67,6 +67,3 @@ Now i just have to open this url in Tor browser while continuing hosting my loca
 ![Screenshot from 2020-04-27 13-45-10.png]({{site.baseurl}}/_posts/Screenshot from 2020-04-27 13-45-10.png)
 
 So this is how we can host our own website at dark-web.
-
-
-
