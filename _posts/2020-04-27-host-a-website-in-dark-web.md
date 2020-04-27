@@ -17,7 +17,8 @@ Install tor in system.
 
 Command: **apt-get install tor**
 
-![Screenshot from 2020-04-27 13-20-09.png]({{site.baseurl}}/_posts/Screenshot from 2020-04-27 13-20-09.png)
+![1.png]({{site.baseurl}}/_posts/1.png)
+
 
 
 **Step 2**
@@ -26,7 +27,8 @@ Create a website and host in localhost.
 
 For that i create a demo index.html page and host it at 127.0.0.1:80 using apache
 
-![Screenshot from 2020-04-27 13-25-54.png]({{site.baseurl}}/_posts/Screenshot from 2020-04-27 13-25-54.png)
+![2.png]({{site.baseurl}}/_posts/2.png)
+
 
 save this at **/var/www/html/** as index.html
 
@@ -34,7 +36,8 @@ start apache server using command: **service apache2 start**
 
 Check 127.0.0.1 in browser to see if index.html get hosted correctly
 
-![Screenshot from 2020-04-27 13-29-45.png]({{site.baseurl}}/_posts/Screenshot from 2020-04-27 13-29-45.png)
+![3.png]({{site.baseurl}}/_posts/3.png)
+
 
 
 **Step 3**
@@ -47,7 +50,8 @@ open this file at locate the lines
 - **HiddenServicePort 80 127.0.0.1:80***
 
 and uncomment them as shown in image
-![Screenshot from 2020-04-27 13-38-42.png]({{site.baseurl}}/_posts/Screenshot from 2020-04-27 13-38-42.png)
+![4.png]({{site.baseurl}}/_posts/4.png)
+
 
 **Step 4** 
 Most of the part is done.. last step is to start tor service and get the domain for our website.
@@ -58,12 +62,14 @@ Tor generate a random 56 chars domain with .onion extension for our hidden servi
 
 To get the domain check the file 
 **/var/lib/tor/hidden_service/hostname**
-![Screenshot from 2020-04-27 13-43-15.png]({{site.baseurl}}/_posts/Screenshot from 2020-04-27 13-43-15.png)
+![5.png]({{site.baseurl}}/_posts/5.png)
+
 
 so onion url for my website is **gkgzabctyvnvwtyblnjqdgxhcfkwqscy5j5yeuoxadfwudm2eplvc5yd.onion**
 
 Now i just have to open this url in Tor browser while continuing hosting my localhost
 
-![Screenshot from 2020-04-27 13-45-10.png]({{site.baseurl}}/_posts/Screenshot from 2020-04-27 13-45-10.png)
+![6.png]({{site.baseurl}}/_posts/6.png)
+
 
 So this is how we can host our own website at dark-web.
