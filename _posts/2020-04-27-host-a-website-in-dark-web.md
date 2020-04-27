@@ -69,7 +69,7 @@ so onion url for my website is **gkgzabctyvnvwtyblnjqdgxhcfkwqscy5j5yeuoxadfwudm
 
 Now i just have to open this url in Tor browser while continuing hosting my localhost
 
-![6.png]({https://github.com/gurus158/blogs/blob/gh-pages/_posts/6.png?raw=true)
+![6.png](https://github.com/gurus158/blogs/blob/gh-pages/_posts/6.png?raw=true)
 
 
 So this is how we can host our own website at dark-web.
