@@ -17,7 +17,7 @@ Install tor in system.
 
 Command: **apt-get install tor**
 
-![1.png]({{site.baseurl}}/_posts/1.png)
+![1.png](https://github.com/gurus158/blogs/blob/gh-pages/_posts/1.png?raw=true)
 
 
 
