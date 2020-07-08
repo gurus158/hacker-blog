@@ -17,7 +17,7 @@ Install tor in system.
 
 Command: **apt-get install tor**
 
-![1.png](https://github.com/gurus158/blogs/blob/gh-pages/_posts/1.png?raw=true)
+![1.png](https://github.com/gurus158/blogs/blob/gh-pages/images/1.png?raw=true)
 
 
 
@@ -27,7 +27,7 @@ Create a website and host in localhost.
 
 For that i create a demo index.html page and host it at 127.0.0.1:80 using apache
 
-![2.png](https://github.com/gurus158/blogs/blob/gh-pages/_posts/2.png?raw=true)
+![2.png](https://github.com/gurus158/blogs/blob/gh-pages/images/2.png?raw=true)
 
 
 save this at **/var/www/html/** as index.html
@@ -36,7 +36,7 @@ start apache server using command: **service apache2 start**
 
 Check 127.0.0.1 in browser to see if index.html get hosted correctly
 
-![3.png](https://github.com/gurus158/blogs/blob/gh-pages/_posts/3.png?raw=true)
+![3.png](https://github.com/gurus158/blogs/blob/gh-pages/images/3.png?raw=true)
 
 
 
@@ -50,7 +50,7 @@ open this file at locate the lines
 - **HiddenServicePort 80 127.0.0.1:80***
 
 and uncomment them as shown in image
-![4.png](https://github.com/gurus158/blogs/blob/gh-pages/_posts/4.png?raw=true)
+![4.png](https://github.com/gurus158/blogs/blob/gh-pages/images/4.png?raw=true)
 
 
 **Step 4** 
@@ -62,14 +62,14 @@ Tor generate a random 56 chars domain with .onion extension for our hidden servi
 
 To get the domain check the file 
 **/var/lib/tor/hidden_service/hostname**
-![5.png](https://github.com/gurus158/blogs/blob/gh-pages/_posts/5.png?raw=true)
+![5.png](https://github.com/gurus158/blogs/blob/gh-pages/images/5.png?raw=true)
 
 
 so onion url for my website is **gkgzabctyvnvwtyblnjqdgxhcfkwqscy5j5yeuoxadfwudm2eplvc5yd.onion**
 
 Now i just have to open this url in Tor browser while continuing hosting my localhost
 
-![6.png](https://github.com/gurus158/blogs/blob/gh-pages/_posts/6.png?raw=true)
+![6.png](https://github.com/gurus158/blogs/blob/gh-pages/images/6.png?raw=true)
 
 
 So this is how we can host our own website at dark-web.
