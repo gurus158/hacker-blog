@@ -3,12 +3,8 @@ layout: default
 ---
 
 <article>
-  <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js">
-   import commentBox from 'commentbox.io';
-   commentBox('5748817198579712-proj');
-  </script>
   <h2>{{ page.title }}</h2>
   <time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}</time>
   {{ content }}
-<div class="commentbox"></div>
 </article>
+<div class="commentbox"></div>
