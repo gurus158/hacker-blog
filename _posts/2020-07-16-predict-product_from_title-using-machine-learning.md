@@ -4,7 +4,7 @@ Imagine you get  thousands of product titles from some E-commerce websites and y
 
 For example:  Title "extreme sale 141gr aveeno baby eczema therapy moisturizing cream"  is assigned product equals to "baby cream" .
 
-After full day hard-work you finally  assigned product to all titles. But you have to it daily . Some how you manged to do it for a week but now you start asking can it be done by using computer programs? Off course it can be done using computers, question should be, how?
+After full day hard-work you finally  assigned product to all titles. But you have to do it daily . Some how you manged to do it for a week but now you start asking can it be done by using computer programs? Off course it can be done using computers, question should be, how?
 
 There can be many solutions. I already have used symbolic AI i.e rule based , where we try to enumerate data based on rules derived from data we have already assigned. Rules can be like "if title contains 'cream' then product is 'cream' " something like that. Only issue with this is we have to hard code rules and rules need to be updated frequently which can be a head ache. However if task is simple and can be solved using Symbolic A.I one should prefer this.
 
@@ -20,7 +20,7 @@ Input: title_en
 
 Output: product
 
-This type of problem better solved by **Supervise Machine Learning**  in which we have training data which already have been categorized  correctly and using this data we build a model which  is able to categorized data which it hasn't seen yet.
+This type of problem can be  solved by **Supervise Machine Learning**  in which we have training data which already have been categorized  correctly and using this data we build a model which  is able to categorized data which it hasn't seen yet.
 
 I have the sample data in csv format which has title and product assigned. let first import this file in a dataframe.
 
@@ -28,10 +28,9 @@ I have the sample data in csv format which has title and product assigned. let f
 import pandas as pd
 df=pd.read_csv('mlTest.csv')
 df=df[['Product','title_en']] #as we only need these two columns 
-print()
 ```
 
-also we need to categorize products into integer values as integers works better than text for categorize data.
+also we need to categorize products into integer values as integers works better than text for categorizing data.
 
 ```python
 df['category_id']=df['Product'].factorize()[0]
@@ -40,7 +39,7 @@ category_to_id = dict(category_id_df.values)
 id_to_category = dict(category_id_df[['category_id', 'Product']].values)
 ```
 
-I basically assigned an integer to each different product calling it **category_id** ,  also created to dictionary category_id_df and category_to_id to quickly get value of category_id based on product and vice versa.
+I basically assigned an integer to each different product calling it **category_id** ,  also created two dictionaries category_id_df and category_to_id to quickly get value of category_id based on product and vice versa.
 
 lets plot the data to visualize it better ......
 
@@ -156,7 +155,7 @@ Output of above is...
 . shampoo 200ml
 ```
 
-now data make more sense. And from here we can start create out network model or ML. As i am testing out what model should fir best.. i will implement 4 models ( **LinearSVC** , **LogisticRegression** , **MultinomialNB** , **RandomForestClassifier** ) and compare their accuracy. All four have their own theory which i'm not discuss here (i'm still understanding them) but we will use sklearn which help us to implement it without worrying about whats going under the hood.
+now data make more sense. And from here we can start create out network model or ML. As i am testing out what model should fit best.. i will implement 4 models ( **LinearSVC** , **LogisticRegression** , **MultinomialNB** , **RandomForestClassifier** ) and compare their accuracy. All four have their own theory which i'm not discuss here (i'm still understanding them) but we will use sklearn which help us to implement it without worrying about whats going under the hood.
 
 before that we also going to split our input dataframe in two : train dataset and test dataset in apx 70:30 ratio. We will use train dataset for training and test dataset as test out model.
 
@@ -181,7 +180,7 @@ models = [
 CV = 10 # cross validator high means more bias , low means less bias 
 cv_df = pd.DataFrame(index=range(CV * len(models)))
 entries = []
-for model in models: # run each model ahost-a-website-in-dark-webnd find its cv-score
+for model in models: # run each model and find its cv-score
   model_name = model.__class__.__name__
   accuracies = cross_val_score(model, features, labels, scoring='accuracy', cv=CV) 
   for fold_idx, accuracy in enumerate(accuracies):
@@ -203,11 +202,13 @@ Name: accuracy, dtype: float64
 
 as you can see  
 
-[LinearSVC]: https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html
+[LinearSVC]: https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html	"LinearSVC"
 
-has performed  best here with 98% accuracy
+has performed  best here with 98.6% accuracy
 
-so lets check this one ot on some random samples from different file which i did not use while training and testing. Sample data in file (categorize by a human)
+so lets check this one out on some random samples from different file which i did not use while training and testing. 
+
+Sample data in file (categorized by a human)
 
 | title                                                        | Product          |
 | ------------------------------------------------------------ | ---------------- |
@@ -235,7 +236,7 @@ output of above is
 ['Baby Lotion']
 ```
 
-which you can see is correct and you can see how smartly it has predicted **baby lotion**  although its title is very similar to **baby cream** ( I'm impressed ) 
+which is correct and you can see how smartly it has predicted **baby lotion**  although its title is very similar to **baby cream** ( I'm impressed ) 
 
 That's it !! 
 
