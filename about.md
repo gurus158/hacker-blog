@@ -20,4 +20,5 @@ Other than Hacking and programming , I also love to
 
 Here I will share  mostly my tech-related thoughts, but also I will share anything I feel like sharing.
 
-One can reach me at **gurdeeps158@gmail.com**  or at [linkedin](https://in.linkedin.com/in/gurdeep-singh-4469a7125)
+One can reach me at **gurdeeps158@gmail.com**  or at [linkedin](https://www.linkedin.com/in/gurdeep-s-4469a7125/)
+
