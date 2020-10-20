@@ -33,7 +33,7 @@ First I thought this is issue in python but when I researched more about this pr
 
 Problem was , there are some decimal numbers which have repetitive decimal digits in **bicimal** (decimal in binary) representation   making it to infinite decimal point and  0.1 is one of them.
 
-To understand this lets try to represent 0.1 in binary. For that we can simply divide 1 with 10 in binary format.
+To understand this l, ets try to represent 0.1 in binary. For that we can simply divide 1 with 10 in binary format.
 
 1 in binary is  1.000...
 
