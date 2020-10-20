@@ -5,11 +5,12 @@
 Recently I was working on development of some computer program which involved many mathematical computation. One of the computation required to add and compare floating numbers. 
 I will not go to exact problem i was solving but it involved a very simple problem describe below, 
 
-We have to three numbers **a,b and c** and have to check if **a+b ==c** or not, quite simple.
+We have three numbers **a,b and c** and have to check if **a+b ==c** or not, quite simple.
 
 simple code in python can be :
 
 ```python   
+>>> a=2.2
 >>> b=3.3       
 >>> c=5.5       
 >>> a+b == c 
