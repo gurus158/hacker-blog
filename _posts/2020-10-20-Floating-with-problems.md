@@ -3,9 +3,7 @@
 # Hi,
 
 Recently I was working on development of some computer program which involved many mathematical computation. One of the computation required to add and compare floating numbers. 
-I will not go to exact problem i was solving but it involved a very simple problem describe below,
-
-there are two list named **a** and **b** having sets of a's and b's (floating numbers), and there is another list **c** which is set of some floating numbers. 
+I will not go to exact problem i was solving but it involved a very simple problem describe below, 
 
 We have to three numbers **a,b and c** and have to check if **a+b ==c** or not, quite simple.
 
