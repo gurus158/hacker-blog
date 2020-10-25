@@ -27,7 +27,7 @@ Basically, we have a [website](https://ac851f3e1e9e6df380b64d9300d7005c.web-secu
 
 ![9.png](https://github.com/gurus158/blogs/blob/gh-pages/images/9.png?raw=true)
 
-we can login using credential  `wiener:peter`  , however our goal is, login to  user `carlos` . Also we have a access to a server , where we can check emails to user wiener, which is hosting [this](https://acf71f451ee46dc380a24d1f01df00ec.web-security-academy.net/) domain. So any request send to this domain can be monitored by us. 
+we can login using credential  `wiener:peter`  , however our goal is, login to  user `carlos` . Also we have access to a server , where we can check emails of user wiener, which is hosting [this](https://acf71f451ee46dc380a24d1f01df00ec.web-security-academy.net/) domain. So any request send to this domain can be monitored by us. 
 
 The forgot password system ,shown in image below , work as -   it asked for username or email and send password reset link to email assigned with username or the email entered(if an account exist with the email or username entered) , a very common functionality in many websites.
 
