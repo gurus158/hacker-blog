@@ -52,9 +52,9 @@ different algorithms and their respective id are:
 
 In above case algorithm is **SHA-512** , SALT is **"m/6Wre3j"**  and hash is **jxlFgso6ZbYtWCOvZh8Im3k7lSj8c2zPXmlhrisk3Rj/oyAn9oO0s9qFQPQ4TEzXrzRhPbaheI4AtkEQiJ8w4/**
 
-After this much information it is very easy to write a python script to crack password hash from a dictionary also known as **dictionary attack** 
+After this much information it is very easy to write a shell script to crack password hash from a dictionary also known as **dictionary attack** 
 
-Lets write our python code to crack hash value
+Lets write our code to crack hash value
 
 ```shell
 #!/bin/bash
