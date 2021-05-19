@@ -7,7 +7,7 @@ published: true
 ## Hi everyone,
 My name is **Gurdeep**. I'm a **tech enthusiast**.
 I did my Computer Engineering from National Institute of Technology, Kurukshetra,India
-I also love Hacking and frequently take part in CTF competition. My CTF team is Scr!ptk!dd!es and we also have a dedicated [Discord Server](https://discord.gg/nbZJekr) you can join if you want to play CTF with us.
+I also love Hacking and frequently take part in CTF competition. My CTF team is warlock_rootx and we also have a dedicated [Discord Server](https://discord.gg/jTK6RTB) you can join if you want to play CTF with us.
 
 Other than Hacking and programming , I also love to 
 
