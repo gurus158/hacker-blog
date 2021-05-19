@@ -26,7 +26,9 @@ above string has lot of information in itself. If you break above line by delimi
 
 - **'7'** --> number of days to show warning before password has to be changed
 
-So password is stored in second substring i.e $6$m/6Wre3j$jxlFgso6ZbYtWCOvZh8Im3k7lSj8c2zPXmlhrisk3Rj/oyAn9oO0s9qFQPQ4TEzXrzRhPbaheI4AtkEQiJ8w4/
+So password is stored in second substring i.e 
+
+$6$m/6Wre3j$jxlFgso6ZbYtWCOvZh8Im3k7lSj8c2zPXmlhrisk3Rj/oyAn9oO0s9qFQPQ4TEzXrzRhPbaheI4AtkEQiJ8w4/
 
 this password string made of three parts i.e
 
