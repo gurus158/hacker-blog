@@ -6,7 +6,7 @@ Like any username - password system , Linux don't save password as plain text. I
 
 Every time you entered user password to login , it generates it's hash and compare it with hash it stored.
 
-You might wondering where these passwords hashes are stored. Linux stores those hashes in a special file named **shadow** at **/etc/shadow** location.
+You might wondering where these password hashes are stored. Linux stores those hashes in a special file named **shadow** at **/etc/shadow** location.
 
 shadow file has entry of each users. An entry in shadow file(each line is an entry) is look like below:
 
@@ -56,27 +56,27 @@ After this much information it is very easy to write a python script to crack pa
 
 Lets write our python code to crack hash value
 
-```python
-from crypt import crypt
-dictionary_file = 'wlist.list'
-hash_value = "jxlFgso6ZbYtWCOvZh8Im3k7lSj8c2zPXmlhrisk3Rj/oyAn9oO0s9qFQPQ4TEzXrzRhPbaheI4AtkEQiJ8w4/"
-hasher_string = "$6$m/6Wre3j"  ### $id$salt
-file_  = open(dictionary_file)
-lines = file_.readlines()
-for line in lines:
-    pass_to_try = line.strip()
-    to_try_hash = crypt(pass_to_try,hasher_string)
-    if hash_value==to_try_hash.split('$')[3]:
-        print('password found:',pass_to_try)
-        exit()
-print('no password matched')
+```shell
+#!/bin/bash
+filename='wlist.list'
+password='$6$m/6Wre3j$jxlFgso6ZbYtWCOvZh8Im3k7lSj8c2zPXmlhrisk3Rj/oyAn9oO0s9qFQPQ4TEzXrzRhPbaheI4AtkEQiJ8w4/'
+salt='m/6Wre3j'
+while read line; do
+t_hash=`mkpasswd -m sha-512 $line $salt`
+if [ $password == $t_hash ]
+then
+        echo "password found: ${line}"
+        exit
+fi
+done < $filename
+echo "no password matched"
 ```
 
 running above code generates below output
 
 ```python
 ┌──(joker㉿gotham)-[~/data/.hacking/password_cracking]
-└─$ python3 cracker.py
+└─$ ./cracker
 password found: zaxscdvf
 
 ```
