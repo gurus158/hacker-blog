@@ -1,5 +1,6 @@
 ---
 published: true
+Written By: Batman
 ---
 ## Attacking ERC1155's _mint function through ReEnterency
 
@@ -54,7 +55,7 @@ contract MySimpleErc1155 is ERC1155, ERC1155Burnable, Ownable {
 
 **MySimpleErc1155** contract is extending openzepplin's implementation of ERC1155. It has some standard variable like name , symbol which get assigned in the constructor. 
 
-Important function here is **mintNFT()**  and **maxMintPerWallet** . The `require (perWalletMinttracker[msg.sender] < maxMintperWallet, "Per wallet mint limit exceed");` is restricting the user to mint more than 10 NFT. And after a successful mint in ` _mint(msg.sender,1 , 1 , "");` , it increment the counter by one for the user  in the `perWalletMinttracker` .This perWalletMinttracker is used in **require** condition to check if the user has minted 10 NFT or not.
+Important function and variables here is **mintNFT()**  and **maxMintPerWallet** . The `require (perWalletMinttracker[msg.sender] < maxMintperWallet, "Per wallet mint limit exceed");` is restricting the user to mint more than 10 NFT. And after a successful mint in ` _mint(msg.sender,1 , 1 , "");` , it increment the counter by one for the user  in the `perWalletMinttracker` .This perWalletMinttracker is used in **require** condition to check if the user has minted 10 NFT or not.
 
 This is very common practice which I seen in many ERC1155 smart contract.  let's compile and deploy this smart contract and mint some NFT.
 
@@ -74,7 +75,7 @@ In ERC1155 , minting is basically transfer of a token **from null addres to the 
 
 Now the problem is user can be a normal wallet or a smart contract. And if it's a smart contract it will implement **onERC1155Received()** . In it's implementation , it is possible to write any logic or even call mintNFT function of the original contract again and it will become a recursion.
 
-As this contract updating **perWalletMinttracker** after callling **_mint()** , It is very possible to bypass   `require(perWalletMinttracker[msg.sender] < maxMintperWallet, "Per wallet mint limit exceed");` this check, because while calling mintNFT again in **onERC1155Received** , perwalletTracker is not updated in other calls. 
+As this contract updating **perWalletMinttracker** after callling **_mint()** , It is very possible to bypass   `require(perWalletMinttracker[msg.sender] < maxMintperWallet, "Per wallet mint limit exceed");` this check, because while calling mintNFT again in **onERC1155Received** , perwalletTracker is not updated yet. 
 
 Let's exploit this vulnerability by creating another contract. code will look like below:
 
@@ -139,6 +140,6 @@ We can confirm this by checking balanceOf function of **MySimpleErc1155** .
 
 
 
-So this how a Re-Enterency can be exploit . To save your contract from this vulnerability. It is recommended to do all required calculation before calling **_mint()** 
+So this is how Re-Enterency can be exploit . To save your contract from this vulnerability. It is recommended to do all required calculation before calling **_mint()** 
 
 or using reEnterency guards available in [openzepplin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol)
